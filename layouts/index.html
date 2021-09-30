@@ -1,9 +1,9 @@
 {{ partial "head.html" . }}
 
-{{ partial "header.html" . }}
 
-{{ partial "body.html" . }}
-
-{{ .Content }}
+<div class="page-body">
+    {{ partial "sidebar.html" . }}
+    {{ partial "content.html" . }}
+</div>
 
 {{ partial "footer.html" . }}

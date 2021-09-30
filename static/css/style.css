@@ -6,6 +6,28 @@
 body {
     font-family: Terminal;
     font-size: 20px;
+    background-color: #000700;
+    color: white;
+    padding: 1em 2em;
+    height: 90vh;
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+
+    width:100%;
+
+    text-align: center;
+    margin: 1em;
+}
+
+h3 {
+    font-weight: 400;
+}
+
+#author {
+    color: #D7D700;
 }
 
 .page-body {
@@ -15,9 +37,23 @@ body {
     padding: 2em;
 }
 
-.page-body > .page-left {
+.page-body > .sidebar {
     text-align: left;
     width: 30%;
+}
+
+.page-body > .sidebar > article {
+    display: flex;
+    align-items: center;
+    margin: 1em 0em
+}
+
+.page-body > .sidebar > article > * {
+    margin: 0em 0.5em
+}
+
+.page-body > .sidebar > article > h3 {
+    border-right: 2px solid;
 }
 
 .page-body > .page-right {
