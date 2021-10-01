@@ -1,13 +1,21 @@
 
 <div class="sidebar">    
-    <h1 id="author">Nuno Gomes</h1>
-    <article>
-        <h3>Front-End Developer</h3>
-        <p>@ Hitachi Solutions</p>
-    </article>
+    <h1 id="author"><a href="{{ .Permalink }}">{{ .Site.Data.sidebar.author }}</a></h1>
+
+    <h2>Roles</h2>
+    {{ range .Site.Data.sidebar.roles }}
+    <div class="sidebar-role">
+        <h3>{{ .role }}</h3>
+        <p>{{ .location }}</p>
+    </div>
+    {{ end }}
     
-    <article >
-        <h3>Electrical Engineer</h3>
-        <p>@ FEUP</p>
-    </article>
+    <h2>Socials</h2>
+    <div class="sidebar-socials">  
+        {{ range .Site.Data.sidebar.socials }}
+        <div class="sidebar-social">
+            <a class="icon" href="{{ .url }}">{{ .icon | markdownify }}</a>
+        </div>
+        {{ end }}
+    </div>
 </div>

@@ -1,6 +1,6 @@
 @font-face {
     font-family: Terminal;
-    src: url(../fonts/Modeseven-L3n5.ttf);
+    src: url(../fonts/SvBasicManual-nRPP.ttf);
 }
 
 body {
@@ -9,59 +9,134 @@ body {
     background-color: #000700;
     color: white;
     padding: 1em 2em;
-    height: 90vh;
 }
 
 footer {
-    position:absolute;
+    position: fixed;
     bottom:0;
 
     width:100%;
 
-    text-align: center;
+    text-align: start;
     margin: 1em;
+
+    color: rgba(255, 255, 255, 0.3)
 }
+
+.sidebar > h2 {
+    margin-top: 2em;
+    margin-bottom: 0.2em
+} 
 
 h3 {
     font-weight: 400;
+    font-size: 1.5em;
 }
 
-#author {
+p {
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+    color: #585
+}
+
+#author, #author > a, #about-me {
     color: #D7D700;
+}
+
+#author::before {
+    content: "C:\\Users\\"
+}
+
+#author::after {
+    content: ">"
+}
+
+#about-me {
+    font-size: 2em;
 }
 
 .page-body {
     display: flex;
     text-align: center;
-    border: 4px solid;
     padding: 2em;
 }
 
-.page-body > .sidebar {
+.sidebar {
     text-align: left;
-    width: 30%;
+    width: 45%;
 }
 
-.page-body > .sidebar > article {
+.sidebar-role, .sidebar-socials {
     display: flex;
     align-items: center;
-    margin: 1em 0em
+    justify-content: flex-start;
+    margin: 1em 0em;
 }
 
-.page-body > .sidebar > article > * {
-    margin: 0em 0.5em
+.sidebar-role, .sidebar-socials {
+    margin-top: 2.5em;
 }
 
-.page-body > .sidebar > article > h3 {
-    border-right: 2px solid;
+.sidebar-role > h3 {
+    width: 45%;
 }
 
-.page-body > .page-right {
+.sidebar-role :nth-child(2)::before {
+    content: "@ "
+}
+
+.sidebar-social {
+    background-color: white;
+    height: 2em;
+    width: 2em;
+}
+
+a.icon > img {
+    width: inherit;
+    color:white;
+    height: auto;
+}
+.sidebar-role > *, .sidebar-socials > * {
+    margin: 0em 0.5em;
+}
+
+.page-right {
     text-align: left;
     width: 70%;
 }
 
 .page-body > * {
-    border: 2px solid;
     padding: 2em 2em;
+}
+
+.article-title {
+    color: #96b02a;
+    margin-top: 2em;
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
+.article-item-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.techstack-category {
+    color: #585;
+    text-align: center;
+}
+
+.techstack-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.techstack-icon {
+    width: 4em;
+    height: 4em;
 }
