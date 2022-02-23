@@ -1,4 +1,4 @@
-# Console
+# Consola
 
 This is the source code for the Consola - [Hugo](https://gohugo.io/) Theme. 
 
